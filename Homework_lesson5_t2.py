@@ -13,6 +13,6 @@ while True:
             print("Ділити на нуль не можна")
         else:
             print(num1 / num2)
-    next = input("Розпочати нове обчислення?(так/ні)")
-    if next == "ні":
+    next_question = input("Розпочати нове обчислення?(так/ні)")
+    if next_question == "ні":
         break
