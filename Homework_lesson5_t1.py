@@ -14,3 +14,4 @@ for el in variable_name:
      print("False")
 if variable_name.count("_") > 1 or variable_name in reserved_words:
     print("False")
+print("True")
