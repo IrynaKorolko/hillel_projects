@@ -5,8 +5,7 @@ reserved_words = [
     "continue", "def", "del", "elif", "else", "except", "finally",
     "for", "from", "global", "if", "import", "in", "is", "lambda",
     "nonlocal", "not", "or", "pass", "raise", "return", "try",
-    "while", "with", "yield"
-]
+    "while", "with", "yield"]
 if variable_name[0].isdigit() or not variable_name.islower():
    print("False")
 for el in variable_name:
