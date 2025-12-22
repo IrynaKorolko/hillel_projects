@@ -8,10 +8,9 @@ reserved_words = [
     "while", "with", "yield"
 ]
 if variable_name[0].isdigit() or not variable_name.islower():
-   print ("False")
+   print("False")
 for el in variable_name:
     if el in string.punctuation and el != "_":
      print("False")
 if variable_name.count("_") > 1 or variable_name in reserved_words:
     print("False")
-print("True")
