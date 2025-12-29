@@ -4,4 +4,5 @@ while user_input > 9:
     str_user_input = str(user_input)
     for digit in str_user_input:
         multiply_result *= int(digit)
-print(multiply_result)
+    user_input = multiply_result
+print(user_input)
