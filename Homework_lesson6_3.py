@@ -1,0 +1,5 @@
+seconds_input = int(input("Введіть кількість секунд: "))
+days, remainder = divmod(seconds_input, 86400)
+hours, remainder = divmod(remainder, 3600)
+minutes, seconds = divmod(remainder, 60)
+print(f"{days} днів, {hours} годин, {minutes} хвилин, {seconds} секунд")
