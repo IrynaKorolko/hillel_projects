@@ -6,9 +6,4 @@ def is_palindrom(text: str) -> bool:
     Повертає: True якщо паліндром, інакше False
     """
 
-    if text == text[::-1]:
-        return True
-    else:
-        return False
-    
-    
+    return True if text == text[::-1] else False
