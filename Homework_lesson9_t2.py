@@ -1,4 +1,4 @@
-def difference(*args: float, int):
+def difference(*args: float) -> float:
     """The function returns the difference between the maximum and minimum values of arguments.
     Args:
         *args: values (any number).
