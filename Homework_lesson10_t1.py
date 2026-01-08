@@ -9,10 +9,12 @@ def pow(x) -> float:
 
 def some_gen(begin, n, func) -> object:
     """The generator yields n elements, starting from begin to get the next element.
+
     Parameters:
         begin: The starting element.
         n: The number of elements.
         func: A function that takes one argument and returns the next element.
+        
     Yields:
         The next element in the sequence.
     """
