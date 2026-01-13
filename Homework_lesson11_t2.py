@@ -1,4 +1,7 @@
-def generate_cube_numbers(end) -> int:
+from typing import Generator
+
+
+def generate_cube_numbers(end) -> Generator [int]:
     """Generate a list of cube numbers from 1 to end (set by user).
 
     Parameters:
