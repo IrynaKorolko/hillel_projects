@@ -5,7 +5,7 @@ def generate_cube_numbers(end) -> int:
         end(int): The upper limit
 
     Return:
-        list: A list of cube numbers from 1 to end.
+        int: cube numbers from 1 to end.
     """
     el = 2
     number_in_cube = el ** 3
