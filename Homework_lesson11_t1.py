@@ -7,14 +7,14 @@ def prime_generator(end):
     Yields:
         int: The next prime number in the list.
     """
-    for num in range(2, end):
+    for num in range(2, end + 1):
         is_prime = True
         for i in range(2, num):
             if num % i == 0:
                 is_prime = False
                 break
         if is_prime:
-            yield 
+            yield num
             
 
 
