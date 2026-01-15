@@ -11,7 +11,7 @@ class Item:
 
 
 class User:
-    """Class representing a user/customer."""
+    """Class representing a user."""
 
     def __init__(self, name: str, surname: str, phone_number: str):
         self.name = name
