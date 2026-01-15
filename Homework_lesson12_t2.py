@@ -8,6 +8,7 @@ class Item:
     def __str__(self):
         return f"{self.name}: {self.description} - {self.price}"
 
+
 class User:
 
     def __init__(self, name: str, surname: str, phone_number: str):
@@ -18,7 +19,9 @@ class User:
     def __str__(self):
         return f"{self.name} {self.surname}, phone: {self.numberphone}"
 
+
 class Purchase:
+
     def __init__(self, user: User):
         self.products = {}
         self.user = user
@@ -39,4 +42,3 @@ class Purchase:
         for item, quantity in self.products:
             total += item.price * quantity
         return total
-    
