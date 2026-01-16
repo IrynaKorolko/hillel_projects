@@ -1,20 +1,24 @@
 import re
 
 
-def delete_html_tags(html_file="draft.html", result_file="cleaned.txt") -> None:
+def delete_html_tags(html_file: str = "draft.html", result_file: str = "cleaned.txt") -> None:
+    """Read an HTML file, remove tags and write cleaned text to a file.
+
+    Parameters:
+        html_file: Path to the input HTML file.
+        result_file: Path to write the cleaned text.
+    Results:
+        A text file without HTML tags.
     """
-    This function reads an HTML file, 
-    removes all HTML tags, and writes the cleaned text to a new file.
-
-    Parameters: html_file, result_file
-
-    Result: File to the output file where cleaned text will be saved.
-    """
-    with open(html_file, 'r', encoding='utf-8') as file:
-        file_content = file.read()
-        cleaned_text = re.sub(r'<[^>]+>', '', file_content)
-
-
-    with open(result_file, 'w', encoding='utf-8') as result:
-        result.write(cleaned_text)
-delete_html_tags()
+    try:
+        with open(html_file, "r", encoding="utf-8") as file:
+            file_content = file.read()
+        cleaned_text = re.sub(r"<.*?>", "", file_content, flags=re.S)
+        lines = cleaned_text.splitlines()
+        final_result = "\n".join(line.strip() for line in lines if line.strip())
+        with open(result_file, "w", encoding="utf-8") as result:
+            result.write(final_result)
+        print(f"Файл '{result_file}' успішно створено без HTML тегів.")
+    except FileNotFoundError as exc:
+        print(f"Помилка при записі файлу '{result_file}': {exc}")
+    delete_html_tags()
