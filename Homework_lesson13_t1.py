@@ -45,7 +45,7 @@ class Group:
         return False
 
     def __str__(self):
-        all_students = ''
+        all_students = " "
         for student in self.group:
             all_students += f"{student.last_name} {student.first_name}\n"
         return f'Номер групи:{self.number}\n {all_students}'
