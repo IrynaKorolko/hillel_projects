@@ -30,7 +30,7 @@ class Group:
 
     def add_student(self, student):
         self.group.append(student)
-            
+
     def find_student(self, last_name):
         for student in self.group:
             if student.last_name == last_name:
