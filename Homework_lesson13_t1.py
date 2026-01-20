@@ -49,9 +49,9 @@ class Group:
             number: Group number
         """
         self.number = number
-        self.group: list[Student] = []
+        self.group = []
 
-    def add_student(self, student: Student) -> None:
+    def add_student(self, student: Student):
         """Add a student to the group.
         
         Args:
