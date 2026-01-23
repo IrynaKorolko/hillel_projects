@@ -101,5 +101,5 @@ class Group:
 
 
 class ErrorCounter(Exception):
-    """Custom exception for group capacity errors."""
     """Custom exception for Group size."""
+pass
