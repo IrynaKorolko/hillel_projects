@@ -19,6 +19,7 @@ class Human:
         """String representation of the Human."""
         return f"{self.first_name} {self.last_name}, {self.age} years old, {self.gender}"
 
+
 class Student(Human):
     """Represents a student and extends a Human class."""
 
@@ -38,13 +39,13 @@ class Student(Human):
     def __str__(self) -> str:
         """Return string representation of the Student."""
         return f"{self.first_name} {self.last_name}, {self.age} years old, {self.gender}, Record Book: {self.record_book}"
+
     def __eq__(self, other) -> bool:
         """Check equality based on last name."""
         if not isinstance(other, Student):
             return False
-        else:
-            return str(self) == str(other)
+        return str(self) == str(other)
+
     def __hash__(self) -> int:
         """Generate hash."""
-        return hash(self.str(self))
-        
+        return hash(str(self))
