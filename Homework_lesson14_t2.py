@@ -19,7 +19,6 @@ class Human:
         """String representation of the Human."""
         return f"{self.first_name} {self.last_name}, {self.age} years old, {self.gender}"
 
-
 class Student(Human):
     """Represents a student and extends a Human class."""
 
@@ -40,7 +39,6 @@ class Student(Human):
         """Return string representation of the Student."""
         return f"{self.first_name} {self.last_name}, {self.age} years old, {self.gender}, Record Book: {self.record_book}"
 
-
 class Group:
     """Represents a group of students."""
 
@@ -53,17 +51,15 @@ class Group:
         self.number = number
         self.group = []
 
-    def add_student(self, student: Student) -> None:
+    def add_student(self, student: Student):
         """Add a student to the group.
         
         Args:
             student: Student object to add
         """
-        if len(self.group) >= 10:
-            raise ErrorCounter
         self.group.append(student)
 
-    def find_student(self, last_name: str) -> Student | None:
+    def find_student(self, last_name: str):
         """Find a student by last name.
         
         Args:
@@ -98,8 +94,3 @@ class Group:
         for student in self.group:
             all_students += f"{student.last_name} {student.first_name}\n"
         return f'Номер групи:{self.number}\n {all_students}'
-
-
-class ErrorCounter(Exception):
-    """Custom exception for group capacity errors."""
-    """Custom exception for Group size."""
