@@ -44,4 +44,7 @@ class Student(Human):
             return False
         else:
             return str(self) == str(other)
+    def __hash__(self) -> int:
+        """Generate hash."""
+        return hash(self.str(self))
         
